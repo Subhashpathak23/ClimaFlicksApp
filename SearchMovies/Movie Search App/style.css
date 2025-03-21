@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-image: url('background_image.jpg');
+    
+  
+    /* background-color: wheat;
+    color: black; */
+
+  
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    font-family: 'Poppins', sans-serif; 
+
+}
+
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    justify-content: space-between;
+    max-width: 75rem;
+}
+
+.logo{
+    margin-left: 1rem;
+}
+.search-bar{
+    margin-right: 1rem;
+}
+.logo a{
+    background-color: whitesmoke;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    background-color:#E17564;
+    color:#F5ECD5;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.search-bar input{
+    width: 15rem;
+    height: 2rem;
+    border-radius: 0.3rem;
+    padding-left: 1rem;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.search-bar button{
+    background-color: #F0BB78;
+    height: 2rem;
+    border: none;
+    outline: none;
+    width: 7rem;
+    font-size: 1.2rem;
+    color:brown;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* main section starts here */
+
+.movie-conatainer{
+    background: rgba(255, 255, 255, 0.1);  
+     background: rgba(0, 150, 255, 0.2);
+   
+   
+    /* background-color: white; */
+    background: rgba(110, 150, 190, 0.5);
+    
+
+    backdrop-filter: blur(0.5rem); 
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80vw; 
+    height: 90vh;
+    color: #000;
+    margin: 1rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+
+
+    color: black;
+}   
+
+.movie-conatainer img{
+    height: 100%;
+}
+
+.basic{
+    text-align: center;
+    margin-bottom: 1rem;
+    color: white;
+
+    color: black;
+}
+
+.genre-buttons button{
+    margin-right: 0.5rem;
+    padding: 0.4rem;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+
+}
+
+.deatils p{
+    display: inline;
+} 
+
+.deatils div{
+ margin: 2rem 1rem 2rem 3rem;
+
+}
+
+
+.hide{
+    display: none;
+}
+
+
+
+/* footer starts here */
+footer{
+    color:crimson;
+    background-color:transparent;
+    height: 2rem;
+    padding: 0.5rem;
+    position: relative;
+    top: 80%;
+    text-align: right;
+}
+
+.developer{
+    background-color:#be4f3e;
+    display: inline;
+    position: fixed;
+    top: 87%;
+    left: 32%;
+    color:black;
+   
+}
+
+.developer span{
+    color: red;
+}
+
+.devloper-hider{
+  display:none;
+}
