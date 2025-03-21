@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: sans-serif; */
+}
+
+body{
+    background-color: #2c7fc28a;
+    background-color: black;
+    color: white;
+    background-image: url('images/background_image1.jpg');
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.apps{
+    display: flex;
+    justify-content: space-between;  
+}
+
+.navBar h1{
+    color: black;
+    text-align: center;
+}
+
+/* div a{
+    margin-right: 2rem;
+    font-size: 1.5rem;
+   
+} */
+
+div h2{
+    color: red;
+}
+
+.main-content{
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+.cards{
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 80vmin;
+    height: 90vmin;
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+
+.cards h2{
+    text-align: center;
+}
+.card-content{
+    background-color: rgba(255, 0, 0, 0.9);
+    width: 50vmin;
+    height: 30vmin;
+    border-radius: 0.6rem;
+    margin-top: 1rem;
+}
+
+.card-content button{
+    color: white;
+    width: 20vmin;
+    height: 8vmin;
+    color: black;
+    position: absolute;
+    margin-top: 1rem;
+    position: absolute;
+    left: 8rem;
+   
+    
+}
+
+
+.card-content img{
+    width: 60vmin;
+    height: 60vmin; 
+}
+
+.btn{
+    margin-top: 2rem;
+    margin-left: 7rem;
+}
+
+.btn a{
+    color: black;
+    background-color: white;
+    background-color: rgba(255, 0, 0, 0.643);
+    padding: 0.6rem;
+    text-decoration: none;
+}

@@ -1,0 +1,32 @@
+body {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb); /* Gradient background */
+    object-fit: cover;
+    text-align: center;
+    color: black;
+}
+
+.card-before-search {
+    height: 20vh;
+    padding-top: 0.7rem;
+    position: relative;
+    top: 10rem;
+    left: 4rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px); /* Glass effect */
+}
+
+.weather {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white background */
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search input, .search button {
+    background: rgba(255, 255, 255, 0.7); /* Transparent input and button */
+    backdrop-filter: blur(5px);
+}
+
+.search button img {
+    filter: brightness(0.5); /* Darken search icon */
+}

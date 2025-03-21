@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1></h1>
+    <div class="card card-before-search">
+        <div class="search">
+            <input type="text" placeholder="enter your city name"
+            spellcheck="false">
+            <button>
+                <img src="images/search.png">
+            </button>
+        </div>
+
+        <!-- <div class="error">
+            <p>Invalid City name</p>
+        </div> -->
+
+        <div class="weather hide">
+            <div>
+                <img class = "weather-icon" src="images/snow.png">
+                <h1 class="temp"></h1>
+            </div>
+             <h2 class="city"></h2>
+        
+
+
+        <div class="details">
+            <div class="col">
+                <img src="images/humidity.png">
+                <div>
+                    <p class="humidity"></p>
+                    <p class="para"></p>
+                </div>
+            </div>
+
+            <div class="col">
+                <img src="images/wind.png">
+                <div>
+                    <p class="wind"></p>
+                    <p class="para"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+    <!-- https://api.openweathermap.org/data/2.5/weather?q=Bhopal&appid=&units=metric -->
+    <!-- 9cead32cbb85eb8990424ba4094dbe00 -->
+     <script src="app.js"></script>
+</body>
+</html>

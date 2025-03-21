@@ -1,0 +1,83 @@
+const weatherApiKey = "YOUR_WEATHER_API_KEY";
+const weatherApiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
+const weatherInput = document.getElementById("weather-input");
+const weatherBtn = document.getElementById("weather-btn");
+
+const city = document.querySelector(".city");
+const temp = document.querySelector(".temp");
+const humidity = document.querySelector(".humidity");
+const wind = document.querySelector(".wind");
+const weatherIcon = document.querySelector(".weather-icon");
+const weatherInfo = document.querySelector(".weather-info");
+
+async function checkWeather(cityName) {
+    const response = await fetch(weatherApiUrl + cityName + `&appid=${weatherApiKey}`);
+    const data = await response.json();
+
+    if (data.cod === "404") {
+        alert("City not found!");
+        return;
+    }
+
+    city.innerText = data.name;
+    temp.innerText = `${data.main.temp}°C`;
+    humidity.innerText = `Humidity: ${data.main.humidity}%`;
+    wind.innerText = `Wind Speed: ${data.wind.speed} km/h`;
+
+    switch (data.weather[0].main) {
+        case "Clouds":
+            weatherIcon.src = "images/clouds.png";
+            break;
+        case "Clear":
+            weatherIcon.src = "images/clear.png";
+            break;
+        case "Rain":
+            weatherIcon.src = "images/rain.png";
+            break;
+        default:
+            weatherIcon.src = "images/clouds.png";
+            break;
+    }
+
+    weatherInfo.classList.remove("hide");
+}
+
+weatherBtn.addEventListener("click", () => checkWeather(weatherInput.value));
+weatherInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") checkWeather(weatherInput.value);
+});
+
+// ----------------- Movie Search Code -----------------
+
+const movieApiKey = "YOUR_MOVIE_API_KEY";
+const movieApiUrl = "https://www.omdbapi.com/?apikey=";
+
+const movieInput = document.getElementById("movie-input");
+const movieBtn = document.getElementById("movie-btn");
+
+const moviePoster = document.querySelector(".movie-poster");
+const movieTitle = document.querySelector(".movie-title");
+const movieDescription = document.querySelector(".movie-description");
+const movieInfo = document.querySelector(".movie-info");
+
+async function checkMovie(movieName) {
+    const response = await fetch(`${movieApiUrl}${movieApiKey}&t=${movieName}`);
+    const data = await response.json();
+
+    if (data.Response === "False") {
+        alert("Movie not found!");
+        return;
+    }
+
+    moviePoster.src = data.Poster;
+    movieTitle.innerText = data.Title;
+    movieDescription.innerText = data.Plot;
+
+    movieInfo.classList.remove("hide");
+}
+
+movieBtn.addEventListener("click", () => checkMovie(movieInput.value));
+movieInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") checkMovie(movieInput.value);
+});
